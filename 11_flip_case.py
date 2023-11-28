@@ -12,9 +12,17 @@ def flip_case(phrase, to_swap):
 
     """
 
-    # iterate through the phrase, search for the to_swap, swap
+    # iterate through the phrase, search for the to_swap, swap case
 
     swapped_phrase = ''
 
     for char in phrase:
-        if
+        if to_swap.lower() == char.lower():
+            if char.islower():
+                swapped_phrase += char.upper()
+            else:
+                swapped_phrase += char.lower()
+        else:
+            swapped_phrase += char
+
+    return swapped_phrase
