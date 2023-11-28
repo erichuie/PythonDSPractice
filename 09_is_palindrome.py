@@ -31,6 +31,8 @@ def is_palindrome(phrase):
 
     return case_insensitive_phrase == case_insensitive_phrase[::-1]
 
+# replace method: phrase.lower().replace(" ", "")
+
 
 
 

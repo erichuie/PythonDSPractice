@@ -14,3 +14,7 @@ def multiple_letter_count(phrase):
         else:
             letter_frequency[letter] = 1
     return letter_frequency
+
+# combine with a get method and tell it to get the key in the dict
+# and in the get method, if it doesnt exist, tell it to do something
+# check solution for less wordy solution - get method

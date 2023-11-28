@@ -48,7 +48,7 @@ def list_manipulation(lst, command, location, value=None):
             lst.insert(0, value)
             return lst
         else:
-            return None
+            return None #if none of the if statements happen it will return None
     elif command == "remove":
         if location == "end":
             return lst.pop()

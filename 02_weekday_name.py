@@ -13,7 +13,7 @@ def weekday_name(day_of_week):
         >>> weekday_name(0)
     """
 
-    number_to_day_dict = {
+    number_to_day_dict = { #because this is a constant, change the variable name to all uppercase
         1: "Sunday",
         2: "Monday",
         3: "Tuesday",

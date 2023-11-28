@@ -15,3 +15,7 @@ def single_letter_count(word, letter):
         if(char.lower() == letter.lower()):
             counter += 1
     return counter
+
+# look up count method in py
+
+# word.lower().count(letter.lower())
