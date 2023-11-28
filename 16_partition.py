@@ -22,6 +22,7 @@ def partition(lst, fn):
     partition = []
     true_list = []
     false_list = []
+
     for element in lst:
         if fn(element):
             true_list.append(element)
@@ -29,4 +30,5 @@ def partition(lst, fn):
             false_list.append(element)
     partition.append(true_list)
     partition.append(false_list)
+
     return partition

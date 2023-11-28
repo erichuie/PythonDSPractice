@@ -20,8 +20,10 @@ def mode(nums):
             number_frequency[num] += 1
         else:
             number_frequency[num] = 1
+            
     for key in number_frequency:
         if number_frequency[key] > curr_highest_frequency:
             curr_highest_frequency = number_frequency[key]
             curr_most_common_num = key
+
     return curr_most_common_num
