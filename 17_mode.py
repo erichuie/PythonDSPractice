@@ -8,6 +8,20 @@ def mode(nums):
         >>> mode([1, 2, 1])
         1
 
-        >>> mode([2, 2, 3, 3, 2])
+        >>> mode([2, 2, 3, 3, 2, 2, 2, 100])
         2
     """
+    number_frequency = {}
+    curr_highest_frequency = 0
+    curr_most_common_num = 0
+    # number_frequency.get(1,0)
+    for num in nums:
+        if num in number_frequency:
+            number_frequency[num] += 1
+        else:
+            number_frequency[num] = 1
+    for key in number_frequency:
+        if number_frequency[key] > curr_highest_frequency:
+            curr_highest_frequency = number_frequency[key]
+            curr_most_common_num = key
+    return curr_most_common_num
