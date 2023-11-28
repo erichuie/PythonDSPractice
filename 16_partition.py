@@ -28,7 +28,10 @@ def partition(lst, fn):
             true_list.append(element)
         else:
             false_list.append(element)
+
     partition.append(true_list)
     partition.append(false_list)
 
     return partition
+
+# add true_list and false_list to partition

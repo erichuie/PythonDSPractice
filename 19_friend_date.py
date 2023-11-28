@@ -19,7 +19,7 @@ def friend_date(a, b):
     a_hobbies = set(a[2])
     b_hobbies = set(b[2])
 
-    if a_hobbies & b_hobbies:
+    if a_hobbies & b_hobbies: #returns the set
         return True
     else:
         return False

@@ -59,3 +59,8 @@ def calculate(operation, a, b, make_int=False, message='The result is'):
             return f"{message} {result}"
     else:
         raise ValueError("Invalid Operation")
+
+    # move the return f here instead of repeating
+    # same thing with the make_int at the end to see
+
+    # python has an int() method -> chops off the right of the decimal place

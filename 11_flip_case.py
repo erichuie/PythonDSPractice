@@ -26,3 +26,5 @@ def flip_case(phrase, to_swap):
             swapped_phrase += char
 
     return swapped_phrase
+
+#there is a method called swapcase in python
