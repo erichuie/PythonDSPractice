@@ -21,3 +21,17 @@ def is_palindrome(phrase):
         >>> is_palindrome('Noon')
         True
     """
+
+
+    case_insensitive_phrase = ''
+
+    for char in phrase:
+        if char != " ":
+            case_insensitive_phrase += char.lower()
+
+    return case_insensitive_phrase == case_insensitive_phrase[::-1]
+
+
+
+
+
