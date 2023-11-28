@@ -3,7 +3,16 @@ def vowel_count(phrase):
 
         >>> vowel_count('rithm school')
         {'i': 1, 'o': 2}
-        
-        >>> vowel_count('HOW ARE YOU? i am great!') 
+
+        >>> vowel_count('HOW ARE YOU? i am great!')
         {'o': 2, 'a': 3, 'e': 2, 'u': 1, 'i': 1}
     """
+    vowels = "aeiou"
+    char_frequency = {}
+    for char in phrase.lower():
+        if char in vowels:
+            if char in char_frequency:
+                char_frequency[char] += 1
+            else:
+                char_frequency[char] = 1
+    return char_frequency

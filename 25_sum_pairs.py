@@ -1,3 +1,4 @@
+import math
 def sum_pairs(nums, goal):
     """Return tuple of first pair of nums that sum to goal.
 
@@ -21,8 +22,22 @@ def sum_pairs(nums, goal):
         >>> sum_pairs([11, 20, 4, 2, 1, 5], 100)
         ()
     """
+    # for i in range(0,len(nums)-1):
+    #     for j in range(i+1, len(nums)):
+    #         if nums[i] + nums[j] == goal:
+    #             return (nums[i], nums[j])
+    # return ()
+    curr_index_pair = []
+    curr_index_difference = math.inf
     for i in range(0,len(nums)-1):
-        for j in range(i+1, len(nums)):
-            if nums[i] + nums[j] == goal:
-                return (nums[i], nums[j])
-    return ()
+        diff_of_goal_nums = goal - nums[i]
+        if diff_of_goal_nums in nums:
+            if curr_index_difference > (nums.index(diff_of_goal_nums)
+                                         - nums.index(nums[i])):
+                curr_index_difference = (nums.index(diff_of_goal_nums)
+                                         - nums.index(nums[i]))
+                curr_index_pair = [diff_of_goal_nums, nums[i]]
+    return tuple(curr_index_pair)
+
+
+
